@@ -17,11 +17,14 @@ public class MainActivity extends AppCompatActivity {
         btnStartActivity2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
-                startActivity(intent);
-
+                startActivityForResult(intent, 1975);
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
     }
 }

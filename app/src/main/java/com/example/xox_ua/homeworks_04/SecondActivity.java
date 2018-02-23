@@ -1,9 +1,11 @@
 package com.example.xox_ua.homeworks_04;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -23,12 +25,23 @@ public class SecondActivity extends AppCompatActivity {
         mSeekBarB = (SeekBar) findViewById(R.id.seekBarB);
         mTvR2 = (TextView) findViewById(R.id.tvR2);
         mTvG2 = (TextView) findViewById(R.id.tvG2);
-        mTvG2 = (TextView) findViewById(R.id.tvB2);
+        mTvB2 = (TextView) findViewById(R.id.tvB2);
         updateBackground();
 
         mSeekBarR.setOnSeekBarChangeListener(seekBarChangeListener);
         mSeekBarG.setOnSeekBarChangeListener(seekBarChangeListener);
         mSeekBarB.setOnSeekBarChangeListener(seekBarChangeListener);
+
+        Button btnToActivity1 = (Button) findViewById(R.id.btnToActivity1);
+        btnToActivity1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                //int colorRed =
+
+
+            }
+        });
     }
 
     private SeekBar.OnSeekBarChangeListener seekBarChangeListener = new SeekBar.OnSeekBarChangeListener() {
@@ -55,5 +68,9 @@ public class SecondActivity extends AppCompatActivity {
         valueB = mSeekBarB.getProgress();
         // меняем фон через формат RGB
         mColorScreen2.setBackgroundColor(Color.rgb(valueR, valueG, valueB));
+        // меняем цифровое значение цвета в TextView
+        mTvR2.setText(String.valueOf(valueR));
+        mTvG2.setText(String.valueOf(valueG));
+        mTvB2.setText(String.valueOf(valueB));
     }
 }

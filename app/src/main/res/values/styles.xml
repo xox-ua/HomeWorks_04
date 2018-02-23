@@ -8,4 +8,17 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- цвет SeekBar для цвета Red  -->
+    <style name="SeekBarR">
+        <item name="colorAccent">@color/colorRed</item>
+    </style>
+    <!-- цвет SeekBar для цвета Green  -->
+    <style name="SeekBarG">
+        <item name="colorAccent">@color/colorGreen</item>
+    </style>
+    <!-- цвет SeekBar для цвета Blue  -->
+    <style name="SeekBarB">
+        <item name="colorAccent">@color/colorBlue</item>
+    </style>
+
 </resources>

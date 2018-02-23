@@ -5,6 +5,7 @@
     <string name="colorG">G</string>
     <string name="colorB">B</string>
     <string name="max255">255</string>
+    <string name="min0">0</string>
     <string name="toActivity1">Подтвердить выбор</string>
     <string name="toActivity2">Выбрать цвет</string>
     <string name="toast1">Цвет выбран. Спасибо.</string>

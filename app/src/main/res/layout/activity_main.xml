@@ -42,13 +42,13 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
-                android:text="@string/colorG"/>
+                android:text="@string/colorG" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
-                android:text="@string/colorB"/>
+                android:text="@string/colorB" />
         </LinearLayout>
 
         <LinearLayout
@@ -61,19 +61,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center_horizontal" />
+                android:gravity="center_horizontal"
+                android:text="@string/min0" />
             <TextView
                 android:id="@+id/tvG1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center_horizontal"/>
+                android:gravity="center_horizontal"
+                android:text="@string/min0" />
             <TextView
                 android:id="@+id/tvB1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center_horizontal"/>
+                android:gravity="center_horizontal"
+                android:text="@string/min0" />
         </LinearLayout>
 
         <LinearLayout

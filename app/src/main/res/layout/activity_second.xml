@@ -24,7 +24,7 @@
                 android:id="@+id/colorScreen2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="2dp"
+                android:layout_margin="5dp"
                 android:background="@color/colorPrimary" />
         </LinearLayout>
 

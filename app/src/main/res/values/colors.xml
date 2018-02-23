@@ -9,4 +9,5 @@
     <color name="colorDrawableRed">#FFC8C8</color>
     <color name="colorDrawableGreen">#C8FFC8</color>
     <color name="colorDrawableBlue">#C8C8FF</color>
+    <color name="colorBorder">#CCCCCC</color>
 </resources>

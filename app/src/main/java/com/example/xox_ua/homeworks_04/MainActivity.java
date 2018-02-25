@@ -13,7 +13,10 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     public View colorScreen1;
-    private TextView tvRed, tvGreen, tvBlue;
+    // всё пишем по отдельности, вдруг захотим изменить только один
+    private TextView tvRed;
+    private TextView tvGreen;
+    private TextView tvBlue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
 
         colorScreen1 = (View) findViewById(R.id.colorScreen1);
         colorScreen1.setBackgroundColor(Color.rgb(0, 0, 0));
+        tvRed = (TextView) findViewById(R.id.tvR1);
+        tvGreen = (TextView) findViewById(R.id.tvG1);
+        tvBlue = (TextView) findViewById(R.id.tvB1);
 
         Button btnStartActivity2 = findViewById(R.id.btnToActivity2);
         btnStartActivity2.setOnClickListener(new View.OnClickListener() {
@@ -39,10 +45,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        tvRed = (TextView) findViewById(R.id.tvR1);
-        tvGreen = (TextView) findViewById(R.id.tvG1);
-        tvBlue = (TextView) findViewById(R.id.tvB1);
-
+        // метод findViewById() здесь не писать - он тяжелый и будет нагружать при каждои выполнении onActivityResult
         switch (requestCode) {
             case 1975:
             if (resultCode == RESULT_OK) {

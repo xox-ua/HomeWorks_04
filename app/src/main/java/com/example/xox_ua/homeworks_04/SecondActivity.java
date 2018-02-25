@@ -12,18 +12,25 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-public class SecondActivity extends AppCompatActivity {
-    private SeekBar mSeekBarR, mSeekBarG, mSeekBarB;
+// наследуемся от главной активити, тогда у дочерней меньше кода, а функционал как у материнской
+// в данном случае речь о запрете поворота экрана
+public class SecondActivity extends MainActivity {
+    // всё пишем по отдельности, вдруг захотим изменить только один
+    private SeekBar mSeekBarR;
+    private SeekBar mSeekBarG;
+    private SeekBar mSeekBarB;
     private View mColorScreen2;
-    private TextView mTvR2, mTvG2, mTvB2;
-    int valueR, valueG, valueB;
+    private TextView mTvR2;
+    private TextView mTvG2;
+    private TextView mTvB2;
+    int valueR;
+    int valueG;
+    int valueB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-        // фиксируем экран (запрет поворота)
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         // TOOLBAR добавление кнопки back и её функционала
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
